@@ -66,7 +66,8 @@ void main(List<String> args) async {
       )
       ..addFlag(
         'no-default-blacklist',
-        help: 'Disables the default folder blacklist (e.g., .dart_tool, build).',
+        help:
+            'Disables the default folder blacklist (e.g., .dart_tool, build).',
         negatable: false,
       )
       ..addFlag(
@@ -88,7 +89,8 @@ void main(List<String> args) async {
     final argExtension = argsResult['extension'] as String;
     final argVerbose = argsResult['verbose'] as bool;
     final argBlacklistedFiles = argsResult['blacklisted-files'] as List<String>;
-    final argBlacklistedFolders = argsResult['blacklisted-folders'] as List<String>;
+    final argBlacklistedFolders =
+        argsResult['blacklisted-folders'] as List<String>;
     final argNoDefaultBlacklist = argsResult['no-default-blacklist'] as bool;
 
     // VALIDATE ARGUMENTS
@@ -101,7 +103,9 @@ void main(List<String> args) async {
     // --- Core Logic ---
 
     // 1. GET A LIST OF ALL MATCHING FILES
-    final files = Glob('**/*$argExtension').listSync(root: argInput).whereType<File>().toList();
+    final files = Glob(
+      '**/*$argExtension',
+    ).listSync(root: argInput).whereType<File>().toList();
 
     if (argVerbose) {
       print(
@@ -222,12 +226,17 @@ void printHelp(ArgParser parser) {
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 /// PASS 1: Reads a file and adds its non-local imports to the `imports` set.
-Future<void> _collectImports(File file, Set<String> imports, bool verbose) async {
+Future<void> _collectImports(
+  File file,
+  Set<String> imports,
+  bool verbose,
+) async {
   if (verbose) print('  - Reading imports from: ${file.path}');
   final lines = await file.readAsLines();
   for (var line in lines) {
     final trimmedLine = line.trim();
-    if (trimmedLine.startsWith("import 'package:") || trimmedLine.startsWith("import 'dart:")) {
+    if (trimmedLine.startsWith("import 'package:") ||
+        trimmedLine.startsWith("import 'dart:")) {
       imports.add(line);
     }
   }
@@ -235,7 +244,11 @@ Future<void> _collectImports(File file, Set<String> imports, bool verbose) async
 
 /// PASS 2: Reads a file, comments out its imports/parts, and writes the rest
 /// of its content to the output sink.
-Future<void> _processAndWriteFileContent(File file, IOSink sink, bool verbose) async {
+Future<void> _processAndWriteFileContent(
+  File file,
+  IOSink sink,
+  bool verbose,
+) async {
   if (verbose) print('  - Writing content from: ${file.path}');
 
   // Write a header comment with the original file path
