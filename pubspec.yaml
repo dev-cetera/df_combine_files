@@ -1,0 +1,50 @@
+##.title
+## ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+##
+## Dart/Flutter (DF) Packages by dev-cetera.com & contributors. The use of this
+## source code is governed by an MIT-style license described in the LICENSE
+## file located in this project's root directory.
+##
+## See: https://opensource.org/license/mit
+##
+## ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+##.title~
+
+name: df_combine_files
+homepage: https://dev-cetera.com/
+repository: https://github.com/robmllze/df_combine_files
+funding:
+  - https://www.buymeacoffee.com/dev_cetera
+description: A command-line tool to combine a bunch of source files of the same type into one for AI parsing.
+version: 0.1.0
+topics:
+  - cli
+  - tool
+  - combine
+  - generative-ai
+  - utility
+
+## -----------------------------------------------------------------------------
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+
+## -----------------------------------------------------------------------------
+
+dependencies:
+  args: ^2.7.0
+  path: ^1.9.1
+  glob: ^2.1.2
+  tuple: ^2.0.2
+
+## -----------------------------------------------------------------------------
+
+dev_dependencies:
+  lints: ^6.0.0
+
+## -----------------------------------------------------------------------------
+
+executables:
+  df_combine_files: df_combine_files
+  combine_files: df_combine_files
+
