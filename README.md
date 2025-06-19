@@ -13,35 +13,29 @@ Dart & Flutter Packages by dev-cetera.com & contributors.
 
 ## Summary
 
-A command-line tool to combine a bunch of source files of the same type into one for AI parsing. You can then copy the contents of the output file and paste them into AI tools like Google AI Studio or Grok chat to ask questions about your code, identify bugs, or improve it.
+A command-line tool to combine a bunch of source files of the same type into one for AI parsing.
 
-## Installation
+## Example
 
 ```sh
 dart pub global deactivate df_combine_files; dart pub global activate df_combine_files
-```
-
-## Usage
-
-```sh
 combine_files -i . -e .dart -o output.dart.txt
 ```
 
-This command creates an output file named `output.dart.txt` (specified with `-o output.dart.txt`) that gathers the contents of all Dart files (identified by the `.dart` extension with `-e .dart`) from the current directory (set by `-i .`).
 
 <!-- END _README_CONTENT -->
 
 ---
 
-Please refer to the [API reference](https://pub.dev/documentation/df_combine_files/) for more information.
+☝️ Please refer to the [API reference](https://pub.dev/documentation/df_combine_files/) for more information.
 
 ---
 
-## Contributing and Discussions
+## 💬 Contributing and Discussions
 
 This is an open-source project, and we warmly welcome contributions from everyone, regardless of experience level. Whether you're a seasoned developer or just starting out, contributing to this project is a fantastic way to learn, share your knowledge, and make a meaningful impact on the community.
 
-### Ways you can contribute
+### ☝️ Ways you can contribute
 
 - **Buy me a coffee:** If you'd like to support the project financially, consider [buying me a coffee](https://www.buymeacoffee.com/dev_cetera). Your support helps cover the costs of development and keeps the project growing.
 - **Find us on Discord:** Feel free to ask questions and engage with the community here: https://discord.gg/gEQ8y2nfyX.
@@ -54,13 +48,13 @@ This is an open-source project, and we warmly welcome contributions from everyon
 
 No matter how you choose to contribute, your involvement is greatly appreciated and valued!
 
-### We drink a lot of coffee...
+### ☕ We drink a lot of coffee...
 
 If you're enjoying this package and find it valuable, consider showing your appreciation with a small donation. Every bit helps in supporting future development. You can donate here: https://www.buymeacoffee.com/dev_cetera
 
 <a href="https://www.buymeacoffee.com/dev_cetera" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" height="40"></a>
 
-## License
+## 🧑‍⚖️ License
 
 This project is released under the [MIT License](https://raw.githubusercontent.com/dev-cetera/df_combine_files/main/LICENSE). See [LICENSE](https://raw.githubusercontent.com/dev-cetera/df_combine_files/main/LICENSE) for more information.
 

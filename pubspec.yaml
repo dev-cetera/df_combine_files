@@ -16,7 +16,7 @@ repository: https://github.com/robmllze/df_combine_files
 funding:
   - https://www.buymeacoffee.com/dev_cetera
 description: A command-line tool to combine a bunch of source files of the same type into one for AI parsing.
-version: 0.1.0
+version: 0.1.1
 topics:
   - cli
   - tool
