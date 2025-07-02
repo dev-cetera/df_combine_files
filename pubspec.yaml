@@ -14,7 +14,9 @@ name: df_combine_files
 homepage: https://dev-cetera.com/
 repository: https://github.com/robmllze/df_combine_files
 funding:
-  - https://www.buymeacoffee.com/dev_cetera
+- https://www.buymeacoffee.com/dev_cetera
+- https://www.patreon.com/c/RobertMollentze
+- https://github.com/sponsors/robmllze
 description: A command-line tool to combine a bunch of source files of the same type into one for AI parsing.
 version: 0.1.1
 topics:
