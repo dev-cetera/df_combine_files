@@ -67,7 +67,8 @@ void main(List<String> args) async {
       )
       ..addFlag(
         'no-default-blacklist',
-        help: 'Disables the default folder blacklist (e.g., .dart_tool, build).',
+        help:
+            'Disables the default folder blacklist (e.g., .dart_tool, build).',
         negatable: false,
       )
       ..addFlag(
@@ -89,7 +90,8 @@ void main(List<String> args) async {
     final argExtension = argsResult['extension'] as String;
     final argVerbose = argsResult['verbose'] as bool;
     final argBlacklistedFiles = argsResult['blacklisted-files'] as List<String>;
-    final argBlacklistedFolders = argsResult['blacklisted-folders'] as List<String>;
+    final argBlacklistedFolders =
+        argsResult['blacklisted-folders'] as List<String>;
     final argNoDefaultBlacklist = argsResult['no-default-blacklist'] as bool;
 
     // VALIDATE ARGUMENTS
@@ -234,7 +236,8 @@ Future<void> _collectImports(
   final lines = await file.readAsLines();
   for (var line in lines) {
     final trimmedLine = line.trim();
-    if (trimmedLine.startsWith("import 'package:") || trimmedLine.startsWith("import 'dart:")) {
+    if (trimmedLine.startsWith("import 'package:") ||
+        trimmedLine.startsWith("import 'dart:")) {
       imports.add(line);
     }
   }
